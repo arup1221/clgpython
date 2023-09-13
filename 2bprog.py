@@ -1,0 +1,35 @@
+def bin2Dec(val):
+    rev = val[::-1]
+    dec = 0
+    i = 0
+    for dig in rev:
+        dec += int(dig) * 2 ** i
+        i += 1
+    return dec
+
+
+def oct2Hex(val):
+    rev = val[::-1]
+    dec = 0
+    i = 0
+    for dig in rev:
+        dec += int(dig) * 8 ** i
+        i += 1
+    List = []
+    while dec != 0:
+        List.append(dec % 16)
+        dec = dec // 16
+    n1 = []
+    for elem in List[::-1]:
+        if elem <= 9:
+            n1.append(str(elem))
+        else:
+            n1.append(chr(ord("A") + (elem - 10)))
+    hex = ".".join(n1)
+    return hex
+
+
+num1 = input("Enter a binary number:")
+print(bin2Dec(num1))
+num2 = input("Enter a octal number")
+print(oct2Hex(num2))
