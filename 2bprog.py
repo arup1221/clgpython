@@ -15,10 +15,12 @@ def oct2Hex(val):
     for dig in rev:
         dec += int(dig) * 8 ** i
         i += 1
+
     List = []
     while dec != 0:
         List.append(dec % 16)
         dec = dec // 16
+
     n1 = []
     for elem in List[::-1]:
         if elem <= 9:

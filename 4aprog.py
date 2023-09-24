@@ -1,17 +1,17 @@
-# def insertsort(arr):
-#     n = len(arr)
-#     for i in range(1, n):
-#         key = arr[i]
-#         j = i - 1
-#         while j >= 0 and key < arr[j]:
-#             arr[j + 1] = arr[j]
-#             j -= 1
-#         arr[j + 1] = key
+def insertsort(arr):
+    n = len(arr)
+    for i in range(1, n):
+        key = arr[i]
+        j = i - 1
+        while j >= 0 and key < arr[j]:
+            arr[j + 1] = arr[j]
+            j -= 1
+        arr[j + 1] = key
 
 
-# arr = [2, 5, 1, 9, 6, 4]
-# insertsort(arr)
-# print(arr)
+arr = [2, 5, 1, 9, 6, 4]
+insertsort(arr)
+print(arr)
 
 
 def mergeSort(array):
@@ -41,10 +41,10 @@ def mergeSort(array):
             k += 1
 
 
-def printarrray(array):
-    for i in range(len(array)):
-        print(array[i], end="")
-    print()
+# def printarrray(array):
+#     for i in range(len(array)):
+#         print(array[i], end="")
+#     print()
 
 
 array = [12, 11, 13, 5, 6, 7]
